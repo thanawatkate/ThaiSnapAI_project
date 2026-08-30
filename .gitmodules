@@ -1,0 +1,6 @@
+[submodule "aihubproject"]
+    path = aihubproject
+    url = git@github.com:thanawatkate/aihubproject.git 
+[submodule "ThaiSnapAI"]
+	path = ThaiSnapAI
+	url = git@github.com:thanawatkate/ThaiSnapAI.git
