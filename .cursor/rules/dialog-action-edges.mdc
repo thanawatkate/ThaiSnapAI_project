@@ -1,0 +1,14 @@
+---
+description: Dialog/wizard action buttons pin far left and far right
+globs: ThaiSnapAI/frontend/adapters/web/**/*.py
+alwaysApply: false
+---
+
+# Dialog action edges
+
+ท้าย `st.dialog` และแถบ Back/Next: ปุ่มหลัก**ซ้ายสุด** · ปุ่มรอง**ขวาสุด** เสมอ
+
+- ใช้ `dialog_action_row()` เท่านั้น — อย่ากองปุ่มชิดซ้ายด้วย `st.columns`
+- ยืนยัน/บันทึก/ย้อนกลับ → `left` · ยกเลิก/ปิด/ถัดไป → `right`
+- ปุ่ม `width="content"` — ห้าม `width="stretch"` บนปุ่มท้าย dialog
+- รายละเอียด: `skills/dialog-action-edges/SKILL.md`
