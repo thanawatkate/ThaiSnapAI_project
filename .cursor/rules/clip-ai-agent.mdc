@@ -1,0 +1,13 @@
+---
+description: Clip AI on/off lives only in Settings → Agents
+globs: ThaiSnapAI/frontend/adapters/web/clip/**,ThaiSnapAI/frontend/adapters/web/streamlit_app.py,ThaiSnapAI/frontend/adapters/web/pages/settings/agents.py
+alwaysApply: false
+---
+
+# Clip AI switch
+
+แหล่งความจริงเดียว: **[AGENTS.md](../../AGENTS.md)** ส่วนที่ 8
+
+- เปิด/ปิด AI ของคลิปที่ตั้งค่า → Agent เท่านั้น
+- ห้าม `st.toggle` ใช้ AI บนหน้าสร้างคลิป
+- หน้าสร้างคลิปอ่านการ์ด Agent แล้วพาไปตั้งค่าถ้ายังไม่พร้อม

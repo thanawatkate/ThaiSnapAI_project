@@ -13,10 +13,8 @@ Product-agnostic hub. Consumers pass own `usageKey` / `feature`.
 
 ```bash
 cd aihubproject
-cp .env.example .env   # if needed
-npm install
-npm run migrate
-npm run dev            # default http://localhost:3400
+./scripts/ensure-dev-ready.sh   # creates .env if missing, Docker MySQL, migrate
+npm run dev                     # default http://localhost:3400
 ```
 
 Docker: `docker compose up --build`  
