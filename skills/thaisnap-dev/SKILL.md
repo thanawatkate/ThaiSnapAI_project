@@ -27,6 +27,7 @@ Windows: `scripts/dev.ps1`.
 - Shared assets/config at `ThaiSnapAI/shared/`
 - No secrets in commits (`.env`, credentials)
 - Streamlit: native widgets + `frontend/.streamlit/config.toml` only — no injected CSS/HTML theme
+- After image/UI edits the photo must not flicker — verify on the real editor before finishing (`skills/no-image-flicker`)
 - Tests: `python tests/test_quick.py` from `ThaiSnapAI/`
 
 ## AiHub link

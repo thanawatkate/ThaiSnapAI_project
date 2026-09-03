@@ -10,3 +10,4 @@ Always read and follow every skill listed below:
 - `skills/clean-arch/SKILL.md`
 - `skills/manual-select-gestures/SKILL.md`
 - `skills/dialog-action-edges/SKILL.md`
+- `skills/no-image-flicker/SKILL.md`

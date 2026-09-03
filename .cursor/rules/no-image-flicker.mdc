@@ -1,0 +1,12 @@
+---
+description: After image/UI edits the photo must not flicker — always verify
+alwaysApply: true
+---
+
+# No image flicker
+
+หลังแก้รูป/UI ภาพต้อง**ไม่กะพริบ ว่าง หรือโหลดใหม่ทั้งใบ** — ตรวจทุกครั้งก่อนจบงาน
+
+- ผลลัพธ์แทนที่ภาพเดิมในที่ · แคชรูปที่ decode แล้ว · remount แคนวาสเฉพาะตอนจำเป็น
+- ห้าม `st.rerun()` ทั้งหน้าเพื่อรีเฟรชรูป · ห้าม `st.image` ใต้แคนวาส
+- รายละเอียด: `skills/no-image-flicker/SKILL.md` · กติกาทีม: `ThaiSnapAI/AGENTS.md` §4
