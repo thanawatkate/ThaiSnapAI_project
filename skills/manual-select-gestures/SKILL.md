@@ -71,7 +71,8 @@ Internal gestures (`_MANUAL_AUTO_GESTURES`): `rect` / `click` / `lasso` / `polyg
 - แปรง / ครอบ: วงครบ → บันทึกทันที (`_handle_manual_finalize` → `_queue_manual_autosave`)
 - แปรง: วงกลมตาม `stroke_width` ใน iframe ของแคนวาส (`brush_cursor.js`) — ห้าม CSS overlay หน้า Streamlit · ปรับขนาดไม่ remount
 - เหลี่ยมที่ยังไม่ปิด: จุดบนแคนวาส (โหมด point) ห้าม inject Fabric guide และห้าม remount ทุกคลิก
-- remount (`CLIP_MANUAL_CANVAS_REV`) เฉพาะ: clear, ซูม, สลับ tool/gesture, **snap bake ดูดขอบ**, ปิดวงเหลี่ยม, apply/บันทึก
+- remount (`CLIP_MANUAL_CANVAS_REV`) เฉพาะ: clear, ซูม, ลากเลื่อนตอนซูม, สลับ tool/gesture, **snap bake ดูดขอบ**, ปิดวงเหลี่ยม, apply/บันทึก
+- แถบซูมอยู่**ใต้ภาพ** — ซูมเข้าแล้วลากภาพเลื่อน (ปุ่มมือ / Space+ลาก / สองนิ้ว) · พิกัดแปลงกลับไปที่รูปจริง
 - ตัด / ลบ: วงครบแล้วสะสม — กด **ใช้ที่เลือก** ครั้งเดียวแล้วบันทึก + ประวัติ
 - สลับ lasso ระหว่างตัด/ลบ: bake outline จาก snap ลงแคนวาส แล้วคง objects
 - แถบเครื่องมือ (job / lasso / dock) ต้องคงค่าเดิมหลังผลลัพธ์เปลี่ยน — เก็บใน `CLIP_MANUAL_TOOL_PREFS` แล้วคืนหลัง `st.rerun(scope="app")`
@@ -103,7 +104,7 @@ Internal gestures (`_MANUAL_AUTO_GESTURES`): `rect` / `click` / `lasso` / `polyg
 | ไฟล์ | หน้าที่ |
 |------|--------|
 | `clip_image_picker.py` | หน้าแก้รูป + แคนวาส + ประวัติ · popup ยืนยันคืนค่า |
-| `clip/brush_cursor.js` | วงกลมนำทางตามหัวแปรงใน iframe ของแคนวาส |
+| `clip/brush_cursor.js` | วงกลมนำทางตามหัวแปรง + ลากเลื่อนตอนซูม ใน iframe ของแคนวาส |
 | `shared/image_ops/polygon_crop.py` | ครอป/ลบตาม `shapes` |
 | `shared/image_ops/object_select.py` | engine ติดขอบ — โหมด `object` เท่านั้น |
 | `backend/api/routes/files.py` | `POST /files/select-object` |
