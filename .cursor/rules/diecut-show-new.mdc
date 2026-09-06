@@ -1,0 +1,12 @@
+---
+description: After die-cut, always show the new *_product photo — never keep the pre-cut thumb
+globs: ThaiSnapAI/frontend/adapters/web/components/zoomable_image.py,ThaiSnapAI/frontend/adapters/web/pages/products/**,ThaiSnapAI/shared/image_ops/product_crop.py,ThaiSnapAI/shared/image_ops/edit_history.py,ThaiSnapAI/backend/infra/services/product_crop.py
+alwaysApply: false
+---
+
+# Die-cut shows the new photo
+
+แหล่งความจริงเดียว: **[AGENTS.md](../ThaiSnapAI/AGENTS.md)** ส่วนที่ 4 → **ไดคัทเสร็จต้องโชว์รูปใหม่**
+
+- หลังไดคัทต้องโชว์ `*_product` ทันที ไม่ค้างรูปเดิมจากแคช
+- รายละเอียด: `skills/diecut-show-new/SKILL.md`

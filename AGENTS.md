@@ -11,3 +11,5 @@ Always read and follow every skill listed below:
 - `skills/manual-select-gestures/SKILL.md`
 - `skills/dialog-action-edges/SKILL.md`
 - `skills/no-image-flicker/SKILL.md`
+- `skills/lazy-thumbs/SKILL.md`
+- `skills/diecut-show-new/SKILL.md`

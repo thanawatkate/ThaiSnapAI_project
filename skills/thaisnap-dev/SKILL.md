@@ -28,6 +28,7 @@ Windows: `scripts/dev.ps1`.
 - No secrets in commits (`.env`, credentials)
 - Streamlit: native widgets + `frontend/.streamlit/config.toml` only — no injected CSS/HTML theme
 - After image/UI edits the photo must not flicker — verify on the real editor before finishing (`skills/no-image-flicker`)
+- Product list / gallery thumbs load in parallel with a skeleton tile — do not decode every thumb on the main thread (`skills/lazy-thumbs`)
 - Tests: `python tests/test_quick.py` from `ThaiSnapAI/`
 
 ## AiHub link

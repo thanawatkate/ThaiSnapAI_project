@@ -1,0 +1,14 @@
+---
+description: Product list/gallery thumbs load in parallel with a skeleton — do not block first paint
+globs: ThaiSnapAI/frontend/adapters/web/components/zoomable_image.py,ThaiSnapAI/frontend/adapters/web/pages/products/**,ThaiSnapAI/frontend/adapters/web/clip/clip_image_picker.py
+alwaysApply: false
+---
+
+# Lazy thumbs
+
+แหล่งความจริงเดียว: **[AGENTS.md](../ThaiSnapAI/AGENTS.md)** ส่วนที่ 4 → **รูปย่อในรายการ**
+
+- รายการ/แกลเลอรีใช้ `parallel_zoomable_image` — หน้าขึ้นก่อน ช่องเทา แล้วรูปแทนที่ในที่
+- ห้ามถอดรหัสทุกรูปบนเธรดหลัก · ห้าม `st.rerun(scope="fragment")` ตอนรันหน้าเต็มเพื่อไล่รูปย่อ
+- รูปที่ขึ้นแล้วใช้แคช — ห้ามกลับเป็นช่องเทา (ดู `skills/no-image-flicker`)
+- รายละเอียด: `skills/lazy-thumbs/SKILL.md`

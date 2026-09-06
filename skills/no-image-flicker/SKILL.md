@@ -14,11 +14,12 @@ description: >-
 
 ## Must
 
-1. ผลลัพธ์แทนที่ภาพเดิมในที่ — ห้ามเคลียร์เป็นว่าง/ดำ/placeholder แล้วค่อยใส่รูปใหม่
+1. ผลลัพธ์แทนที่ภาพเดิมในที่ — ห้ามเคลียร์เป็นว่าง/ดำ/placeholder แล้วค่อยใส่รูปใหม่ (ยกเว้นช่องเทาครั้งแรกของรูปย่อในรายการ — ดู `skills/lazy-thumbs`)
 2. แคชรูปที่ decode แล้ว (`_manual_src_image`) จนกว่า path/mtime เปลี่ยน
 3. remount แคนวาส (`CLIP_MANUAL_CANVAS_REV` / เปลี่ยน `key` / `initial_drawing`) เฉพาะเคลียร์ สลับเครื่องมือ snap bake บันทึก — ห้ามทุก stroke
 4. poll งานช้าด้วย `@st.fragment(run_every=…)` — ห้าม `st.rerun()` ทั้งหน้าเพื่อรีเฟรชรูป
 5. ห้าม `st.image` พรีวิวแยกใต้แคนวาส
+6. ไดคัทเสร็จแล้วต้องโชว์ `*_product` — ห้ามค้างต้นฉบับ (ดู `skills/diecut-show-new/SKILL.md`)
 
 ```python
 # ✅ แคชข้าม rerun ของแคนวาส
