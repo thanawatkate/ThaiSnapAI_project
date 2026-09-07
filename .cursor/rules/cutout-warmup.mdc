@@ -1,0 +1,12 @@
+---
+description: On API start, probe the machine and load die-cut models in the background
+globs: ThaiSnapAI/backend/api/main.py,ThaiSnapAI/shared/image_ops/runtime_warmup.py,ThaiSnapAI/shared/image_ops/device_runtime.py,ThaiSnapAI/shared/image_ops/product_crop.py,ThaiSnapAI/backend/infra/services/product_crop.py
+alwaysApply: false
+---
+
+# Cutout warmup on boot
+
+แหล่งความจริงเดียว: **[AGENTS.md](../ThaiSnapAI/AGENTS.md)** ส่วนที่ 1 → **ตอนเปิดแอปโหลดเครื่องมือตัดรูปเบื้องหลัง**
+
+- เช็คสเปกแล้วอุ่น rembg ในเธรดพื้นหลัง — ห้ามบล็อก `/health`
+- รายละเอียด: `skills/cutout-warmup/SKILL.md`

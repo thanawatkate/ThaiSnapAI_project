@@ -13,3 +13,4 @@ Always read and follow every skill listed below:
 - `skills/no-image-flicker/SKILL.md`
 - `skills/lazy-thumbs/SKILL.md`
 - `skills/diecut-show-new/SKILL.md`
+- `skills/cutout-warmup/SKILL.md`

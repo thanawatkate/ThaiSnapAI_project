@@ -30,6 +30,7 @@ Windows: `scripts/dev.ps1`.
 - After image/UI edits the photo must not flicker — verify on the real editor before finishing (`skills/no-image-flicker`)
 - Product list / gallery thumbs load in parallel with a skeleton tile — do not decode every thumb on the main thread (`skills/lazy-thumbs`)
 - Tests: `python tests/test_quick.py` from `ThaiSnapAI/`
+- API boot probes the machine and warms die-cut models on a background thread (`skills/cutout-warmup`) — `/health` must not wait
 
 ## AiHub link
 
