@@ -14,10 +14,10 @@ Full team rules live in `ThaiSnapAI/AGENTS.md` — read that first for any non-t
 ```bash
 cd ThaiSnapAI
 ./scripts/dev.sh          # AiHub :3400 + API :8000 + UI :8501
-SKIP_AI_HUB=1 ./scripts/dev.sh   # skip hub
+SKIP_AI_HUB=1 ./scripts/dev.sh   # skip hub — app still works
 ```
 
-Windows: `scripts/dev.ps1`.
+Windows: `scripts/dev.ps1`. AiHub is optional: use the app with API+UI only. Hub is for paid-plan platform text (`AI_HUB.md`).
 
 ## Must
 
@@ -34,4 +34,4 @@ Windows: `scripts/dev.ps1`.
 
 ## AiHub link
 
-Text work uses hub when `AI_HUB_URL` + `AI_HUB_API_KEY` set. See `ThaiSnapAI/docs/guides/ai/AI_HUB.md`.
+Hub not required to run. Text work uses hub when `AI_HUB_URL` + `AI_HUB_API_KEY` set; otherwise local/BYOK. See `ThaiSnapAI/docs/guides/ai/AI_HUB.md`.
