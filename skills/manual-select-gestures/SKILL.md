@@ -71,7 +71,7 @@ Internal gestures (`_MANUAL_AUTO_GESTURES`): `rect` / `click` / `lasso` / `polyg
 - แปรง / ครอบ: วงครบ → บันทึกทันที (`_handle_manual_finalize` → `_queue_manual_autosave`)
 - แปรง: วงกลมตาม `stroke_width` ใน iframe ของแคนวาส (`brush_cursor.js`) — ห้าม CSS overlay หน้า Streamlit · ปรับขนาดไม่ remount
 - เหลี่ยมที่ยังไม่ปิด: จุดบนแคนวาส (โหมด point) ห้าม inject Fabric guide และห้าม remount ทุกคลิก
-- "remount" (`CLIP_MANUAL_CANVAS_REV`) เฉพาะ: clear, ซูม, ลากเลื่อนตอนซูม, สลับ tool/gesture, **snap bake ดูดขอบ**, ปิดวงเหลี่ยม, apply/บันทึก — ทำโดยส่ง `clipRev` ใน `initial_drawing` (อัปเดตในที่เดิม) **ห้ามเปลี่ยน key ของแคนวาส** และห้ามย้ายตำแหน่งแคนวาสใน layout: Streamlit 1.66 mount iframe ของ component ได้ครั้งเดียวต่อการโหลดหน้า key ใหม่ = แคนวาสว่าง (`picker_stage` key คงที่ `clip_manual_canvas_{gen}`; gen เปลี่ยนเฉพาะรูปใหม่ที่ต้องกล่องขนาดอื่น)
+- "remount" (`CLIP_MANUAL_CANVAS_REV`) เฉพาะ: clear, ซูม, ลากเลื่อนตอนซูม, สลับ tool/gesture, **snap bake ดูดขอบ**, ปิดวงเหลี่ยม, apply/บันทึก — ทำโดยส่ง `clipRev` ใน `initial_drawing` (อัปเดตในที่เดิม ไม่ remount จริง = ไม่กระพริบ) · key ของแคนวาสคงที่ `clip_manual_canvas_{gen}` (gen เปลี่ยนเฉพาะรูปใหม่ที่ต้องกล่องขนาดอื่น) · `brush_cursor.js` **ห้ามแก้ `window.parent.postMessage` ของหน้า Streamlit** (ใช้ Proxy ของ `parent` ใน iframe เท่านั้น) — การ patch หน้าแม่ทำให้แคนวาสที่ mount ทีหลังค้าง 0x0 ("unregistered ComponentInstance")
 - แถบซูมอยู่**ใต้ภาพ** — ซูมเข้าแล้วลากภาพเลื่อน (ปุ่มมือ / Space+ลาก / สองนิ้ว) · พิกัดแปลงกลับไปที่รูปจริง
 - ตัด / ลบ: วงครบแล้วสะสม — กด **ใช้ที่เลือก** ครั้งเดียวแล้วบันทึก + ประวัติ
 - สลับ lasso ระหว่างตัด/ลบ: bake outline จาก snap ลงแคนวาส แล้วคง objects
